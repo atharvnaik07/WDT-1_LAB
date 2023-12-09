@@ -1,0 +1,65 @@
+/*WDT-1Pr1 is just Demonstration of Installation of Xampp server, MySQL Server and setting path, user and password.*/
+/*WDT-1Pr1 : -*/
+
+I] Installing XAMPP, MySQL Server, and configuring MySQL with paths, users, and passwords involves several steps.
+II] Below is a detailed demonstration of how to do this : -
+    A] Installing XAMPP : -
+        i] XAMPP is a package that includes Apache (a web server), MySQL (a database server), PHP, and more. You can download XAMPP from the official website: https://www.apachefriends.org/index.html
+        ii] Follow these steps to install XAMPP:
+            a] Download the appropriate XAMPP installer for your operating system (Windows, macOS, or Linux).
+            b] Run the installer and follow the on-screen instructions.
+            c] During the installation process, you can choose the components you want to install. Make sure that "MySQL Database" is selected.
+            d] Complete the installation.
+    B] Starting XAMPP and MySQL Server : -
+        *] Once XAMPP is installed, follow these steps to start XAMPP and the MySQL server : -
+            a] Launch the XAMPP Control Panel.
+            b] On Windows, you can find it in the Start menu.
+            c] On macOS and Linux, you can start it from the terminal by running sudo /opt/lampp/manager-linux-x64.run.
+            d] Click the "Start" button next to "Apache" and "MySQL." This will start the Apache web server and MySQL server.
+            e] If everything is running successfully, you will see "Running" status next to both Apache and MySQL.
+    C] Accessing phpMyAdmin : -
+        i] XAMPP provides a web-based tool called phpMyAdmin for managing MySQL databases.
+        ii] To access it : -
+            a] Open a web browser.
+            b] Enter the following URL: http://localhost/phpmyadmin/
+            c] You should see the phpMyAdmin login page.
+    D] Creating a MySQL User and Setting a Password : -
+        i] By default, XAMPP MySQL installation has a root user with no password.
+        ii] It's essential to set a password for the root user and create additional users for your databases.
+        iii] Here's how to do it using phpMyAdmin : -
+            a] Log in to phpMyAdmin with the default credentials (username: "root" and no password).
+            b] Click on the "User accounts" tab.
+            c] Click on "Edit privileges" for the "root" user.
+            d] In the "Change password" section, enter a new password for the root user and confirm it.
+            e] Scroll down and click the "Go" button to save the changes.
+    E] Creating a New Database : -
+        *] Now, you can create a new database : -
+            a] Click on the "Databases" tab.
+            b] Enter a name for your new database in the "Create database" field.
+            c] Choose a collation (usually the default is fine).
+            d] Click the "Create" button.
+    F] Creating a New User and Granting Privileges : -
+        *] It's a good practice to create a separate user for each database with the necessary privileges : -
+            a] Click on the "User accounts" tab.
+            b] Click the "Add user account" button.
+            c] Enter a username and password for the new user.
+            d] Under "Global privileges," select "Check All" to grant all privileges.
+            e] Under "Database for user," select the database you created earlier.
+            f] Click the "Go" button to create the user and grant privileges.
+    G] Setting Up MySQL Path (Optional) : -
+        i] If you want to use MySQL from the command line, you can set up the MySQL executable path.
+        ii] Follow these steps : -
+            a] Locate the MySQL executable (mysql.exe).
+            b] It is usually located in the XAMPP installation directory under "mysql/bin" (e.g., "C:\xampp\mysql\bin" on Windows).
+            c] Add the MySQL binary directory to your system's PATH environment variable.
+            d] On Windows : -
+                Search for "Environment Variables" in the Start menu, click "Edit the system environment variables," click the
+            "Environment Variables" button, and under "System variables," find "Path." Click "Edit," then "New," and add the path to the MySQL binary directory.
+            e] On Linux/macOS : -
+                Add the following line to your shell's profile configuration file (e.g., "/.bashrc" or "/.bash_profile") : -
+                    export PATH=$PATH:/opt/lampp/mysql/bin  # Replace with the actual path
+        iii] After making these changes, open a new terminal window and test the MySQL command-line client by running mysql -u root -p.
+        iv] You will be prompted for the root password you set earlier.
+III] That's it!
+IV] You've successfully installed XAMPP, configured MySQL, set a password, and created a database and user.
+V] You can now use MySQL for your web development projects.
