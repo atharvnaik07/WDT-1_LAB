@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form action="process.php" method="post">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" required><br><br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" required><br><br>
+
+            <label>Gender:</label>
+                <input type="radio" name="gender" value="Male" id="male"><label for="male">Male</label>
+                <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label>
+                <input type="radio" name="gender" value="Others" id="others"><label for="others">Others</label><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br><br>
+
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="India">India</option>
+                <option value="Germany">Germany</option>
+                <option value="USA">USA</option>
+                <option value="Japan">Japan</option>
+                <option value="South Africa">South Africa</option>
+            </select><br><br>
+
+            <label>Interests: </label>
+            <input type="checkbox" name="interests[]" id="Reading" value="Reading"><label for="Reading">Reading</label>
+            <input type="checkbox" name="interests[]" id="Travelling" value="Travelling"><label for="Travelling">Travelling</label>
+            <input type="checkbox" name="interests[]" id="Sports" value="Sports"><label for="Sports">Sports</label>
+            <br><br>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </body>
+</html>
